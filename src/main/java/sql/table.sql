@@ -47,5 +47,3 @@ CREATE TABLE IF NOT EXISTS shareholder
     phone_number   VARCHAR(15) UNIQUE,
     national_code  VARCHAR(10) UNIQUE
 );
-
-
