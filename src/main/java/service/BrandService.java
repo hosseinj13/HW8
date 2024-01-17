@@ -1,12 +1,13 @@
 package service;
 
+import repository.BrandRepository;
 import repository.UserRepository;
 
 public class BrandService {
 
-    private final UserRepository userRepository;
+    private final BrandRepository brandRepository;
 
-    public BrandService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public BrandService(BrandRepository brandRepository) {
+        this.brandRepository = brandRepository;
     }
 }
