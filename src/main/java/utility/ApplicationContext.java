@@ -2,9 +2,11 @@ package utility;
 
 import connection.JdbcConnection;
 import repository.BrandRepository;
+import repository.CategoryRepository;
 import repository.ProductRepository;
 import repository.UserRepository;
 import service.BrandService;
+import service.CategoryService;
 import service.ProductService;
 import service.UserService;
 import java.sql.Connection;
@@ -15,8 +17,11 @@ public class ApplicationContext {
     private static final Connection CONNECTION;
     private static final UserRepository USER_REPOSITORY;
     private static final BrandRepository BRAND_REPOSITORY;
-
     private static final ProductRepository PRODUCT_REPOSITORY;
+    private static final CategoryRepository CATEGORY_REPOSITORY;
+
+
+
 
 
 
@@ -24,6 +29,8 @@ public class ApplicationContext {
     private static final UserService USER_SERVICE;
     private static final BrandService BRAND_SERVICE;
     private static final ProductService PRODUCT_SERVICE;
+    private static final CategoryService CATEGORY_SERVICE;
+
 
 
 
@@ -40,6 +47,9 @@ public class ApplicationContext {
         PRODUCT_REPOSITORY = new ProductRepository(CONNECTION);
         PRODUCT_SERVICE = new ProductService(PRODUCT_REPOSITORY);
 
+        CATEGORY_REPOSITORY = new CategoryRepository(CONNECTION);
+        CATEGORY_SERVICE = new CategoryService(CATEGORY_REPOSITORY);
+
     }
 
     public static UserService getUserService(){
@@ -53,6 +63,11 @@ public class ApplicationContext {
     public static ProductService getProductService(){
         return PRODUCT_SERVICE;
     }
+
+    public static CategoryService getCategoryService(){
+        return CATEGORY_SERVICE;
+    }
+
 
 
 
