@@ -18,4 +18,9 @@ public class ApplicationContext {
         USER_REPOSITORY = new UserRepository(CONNECTION);
         USER_SERVICE = new UserService(USER_REPOSITORY);
     }
+
+    public static UserService getUserService(){
+        return USER_SERVICE;
+    }
+
 }
