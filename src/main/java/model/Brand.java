@@ -8,5 +8,13 @@ public class Brand {
 
     private String description;
 
+    public Brand() {
+    }
 
+    public Brand(int brandId, String brandName, String website, String description) {
+        this.brandId = brandId;
+        this.brandName = brandName;
+        this.website = website;
+        this.description = description;
+    }
 }
