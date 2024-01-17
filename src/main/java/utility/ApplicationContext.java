@@ -34,7 +34,7 @@ public class ApplicationContext {
         return USER_SERVICE;
     }
 
-    public static UserService getBrandService(){
+    public static BrandService getBrandService(){
         return BRAND_SERVICE;
     }
 
