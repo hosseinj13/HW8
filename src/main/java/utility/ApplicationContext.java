@@ -1,14 +1,9 @@
 package utility;
 
 import connection.JdbcConnection;
-import repository.BrandRepository;
-import repository.CategoryRepository;
-import repository.ProductRepository;
-import repository.UserRepository;
-import service.BrandService;
-import service.CategoryService;
-import service.ProductService;
-import service.UserService;
+import repository.*;
+import service.*;
+
 import java.sql.Connection;
 
 
@@ -19,6 +14,7 @@ public class ApplicationContext {
     private static final BrandRepository BRAND_REPOSITORY;
     private static final ProductRepository PRODUCT_REPOSITORY;
     private static final CategoryRepository CATEGORY_REPOSITORY;
+    private static final ShareholderRepository SHAREHOLDER_REPOSITORY;
 
 
 
@@ -30,6 +26,8 @@ public class ApplicationContext {
     private static final BrandService BRAND_SERVICE;
     private static final ProductService PRODUCT_SERVICE;
     private static final CategoryService CATEGORY_SERVICE;
+    private static final ShareholderService SHAREHOLDER_SERVICE;
+
 
 
 
@@ -50,6 +48,9 @@ public class ApplicationContext {
         CATEGORY_REPOSITORY = new CategoryRepository(CONNECTION);
         CATEGORY_SERVICE = new CategoryService(CATEGORY_REPOSITORY);
 
+        SHAREHOLDER_REPOSITORY = new ShareholderRepository(CONNECTION);
+        SHAREHOLDER_SERVICE = new ShareholderService(SHAREHOLDER_REPOSITORY);
+
     }
 
     public static UserService getUserService(){
@@ -68,9 +69,9 @@ public class ApplicationContext {
         return CATEGORY_SERVICE;
     }
 
-
-
-
+    public static ShareholderService getShareholderService(){
+        return SHAREHOLDER_SERVICE;
+    }
 
 
 }
