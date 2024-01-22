@@ -30,16 +30,16 @@ public class BrandService {
 
     public void addBrand() throws SQLException {
         System.out.println("Please enter brand name :  ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Please enter brand website:  ");
-        String website = scanner.next();
+        String website = scanner.nextLine();
         if (WebsiteValidator.isWebsiteValid(website)) {
             System.out.println("Website URL is valid!");
         } else {
             System.out.println("Invalid website URL. Please enter a valid website URL.");
         }
         System.out.println("Please enter brand description:  ");
-        String description = scanner.next();
+        String description = scanner.nextLine();
 
         if (WebsiteValidator.isWebsiteValid(website)) {
             Brand brand = new Brand(name, website, description);
@@ -90,17 +90,17 @@ public class BrandService {
         System.out.println(existingBrand);
 
         System.out.println("Please update brand name: ");
-        String newName = scanner.next();
+        String newName = scanner.nextLine();
 
         System.out.println("Please update brand website: ");
-        String newWebsite = scanner.next();
+        String newWebsite = scanner.nextLine();
         if (WebsiteValidator.isWebsiteValid(newWebsite)) {
             System.out.println("Invalid website URL. Please enter a valid website URL.");
             return;
         }
 
         System.out.println("Please update brand description: ");
-        String newDescription = scanner.next();
+        String newDescription = scanner.nextLine();
 
         Brand updatedBrand = new Brand(brandId, newName, newWebsite, newDescription);
         boolean isUpdated = brandRepository.update(updatedBrand);
