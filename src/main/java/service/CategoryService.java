@@ -20,9 +20,9 @@ public class CategoryService {
 
     public void addCategory() throws SQLException {
         System.out.println("Please enter category name :  ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Please enter category description:  ");
-        String description = scanner.next();
+        String description = scanner.nextLine();
 
         Category category = new Category(name, description);
 
@@ -70,9 +70,9 @@ public class CategoryService {
         System.out.println(existingCategory);
 
         System.out.println("Please update category name :  ");
-        String newCategoryName = scanner.next();
+        String newCategoryName = scanner.nextLine();
         System.out.println("Please update category description:  ");
-        String newCategoryDescription = scanner.next();
+        String newCategoryDescription = scanner.nextLine();
 
         Category category = new Category(categoryId, newCategoryName, newCategoryDescription);
         boolean rowsUpdated = categoryRepository.update(category);
