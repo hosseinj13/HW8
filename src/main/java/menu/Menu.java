@@ -20,8 +20,32 @@ public class Menu {
     public Menu() throws SQLException {
     }
 
+    public void publicMenu() throws SQLException {
+        
+        System.out.println("********** WELCOME **********");
+        System.out.println("1-USER AUTHENTICATION");
+        System.out.println("2-CATEGORY MENU");
+        System.out.println("3-BRAND MENU");
+        System.out.println("4-PRODUCT MENU");
+        System.out.println("5-SHAREHOLDER MENU");
+        System.out.println("6-SHAREHOLDER-BRAND MENU");
+        System.out.println("Choose your number: ");
+
+        int number = scanner.nextInt();
+        scanner.nextLine();
+
+        switch (number) {
+            case 1 -> userMenu();
+            case 2 -> categoryMenu();
+            case 3 -> brandMenu();
+            case 4 -> productMenu();
+            case 5 -> shareholderMenu();
+            case 6 -> shareholderBrandMenu();
+        }
+    }
+
+
     public void userMenu() throws SQLException {
-        System.out.println("****** WELCOME ******");
         System.out.println("1-SIGN UP");
         System.out.println("2-SIGN IN");
         System.out.println("3-EXIT");
