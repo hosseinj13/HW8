@@ -27,10 +27,10 @@ public class ProductService {
 
     public void addProduct() throws SQLException {
         System.out.println("Please enter product name :  ");
-        String productName = scanner.next();
+        String productName = scanner.nextLine();
 
         System.out.println("Please enter product create date:  ");
-        String inputDate = scanner.next();
+        String inputDate = scanner.nextLine();
         LocalDate createDate = null;
         try {
             createDate = LocalDate.parse(inputDate);
