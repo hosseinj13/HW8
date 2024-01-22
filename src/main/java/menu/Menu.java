@@ -21,7 +21,7 @@ public class Menu {
     }
 
     public void publicMenu() throws SQLException {
-        
+
         System.out.println("********** WELCOME **********");
         System.out.println("1-USER AUTHENTICATION");
         System.out.println("2-CATEGORY MENU");
