@@ -19,11 +19,11 @@ public class UserService {
     public void signup() throws SQLException {
 
         System.out.println("Please enter your name:  ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Please enter your username:  ");
-        String username = scanner.next();
+        String username = scanner.nextLine();
         System.out.println("Please enter your email:  ");
-        String email = scanner.next();
+        String email = scanner.nextLine();
         if (EmailValidator.isEmailValid(email)) {
             System.out.println("Email address is valid!");
         } else {
@@ -31,7 +31,7 @@ public class UserService {
             return;
         }
         System.out.println("Please enter your password:  ");
-        String password = scanner.next();
+        String password = scanner.nextLine();
         if (PasswordValidator.isPasswordValid(password)) {
             System.out.println("Password is valid!");
         } else {
