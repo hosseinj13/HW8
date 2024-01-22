@@ -25,9 +25,9 @@ public class ShareholderService {
 
     public void saveShareholder() throws SQLException {
         System.out.println("Please enter shareholder name :  ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         System.out.println("Please enter shareholder phoneNumber:  ");
-        String phoneNumber = scanner.next();
+        String phoneNumber = scanner.nextLine();
         if (PhoneNumberValidator.isIranianPhoneNumberValid(phoneNumber)) {
             System.out.println("Iranian phone number is valid!");
         } else {
@@ -35,7 +35,7 @@ public class ShareholderService {
             return;
         }
         System.out.println("Please enter shareholder nationalCode:  ");
-        String nationalCode = scanner.next();
+        String nationalCode = scanner.nextLine();
         if (NationalCodeValidator.isNationalCodeValid(nationalCode)) {
             System.out.println("National code is valid!");
         } else {
