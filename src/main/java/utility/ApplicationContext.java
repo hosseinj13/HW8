@@ -18,22 +18,12 @@ public class ApplicationContext {
     private static final ShareholderBrandRepository SHAREHOLDER_BRAND_REPOSITORY;
 
 
-
-
-
-
-
-
     private static final UserService USER_SERVICE;
     private static final BrandService BRAND_SERVICE;
     private static final ProductService PRODUCT_SERVICE;
     private static final CategoryService CATEGORY_SERVICE;
     private static final ShareholderService SHAREHOLDER_SERVICE;
     private static final ShareholderBrandService SHAREHOLDER_BRAND_SERVICE;
-
-
-
-
 
 
 
@@ -83,7 +73,6 @@ public class ApplicationContext {
     public static ShareholderBrandService getShareholderBrandService(){
         return SHAREHOLDER_BRAND_SERVICE;
     }
-
 
 
 }
